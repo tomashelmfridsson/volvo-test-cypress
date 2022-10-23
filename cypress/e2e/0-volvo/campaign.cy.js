@@ -1,8 +1,7 @@
 /// <reference types="@cypress-audit/lighthouse" />
 
-describe.only("campaign", () => {
-  it.skip("Accept trust", () => {
-    // cy.visit('https://www.dn.se/');
+describe("campaign", () => {
+  it.only("Accept trust", () => {
     cy.clearCookies();
     cy.visit("https://www.volvocars.com/intl/v/car-safety/a-million-more/", {
       // volvocars is blocked for robots, this is a workaround
@@ -14,24 +13,16 @@ describe.only("campaign", () => {
     cy.get("#onetrust-accept-btn-handler").click();
   });
 
-  it.skip("loads fast enough", () => {
+  it.skip('lighthouse audits', () => {
     cy.visit("https://www.volvocars.com/intl/v/car-safety/a-million-more/", {
+      // volvocars is blocked for robots, this is a workaround
       headers: {
         accept: "application/json, text/plain, */*",
-        'user-agent': 'axios/0.27.2'
+        "user-agent": "axios/0.27.2",
       },
     });
     cy.get("#onetrust-accept-btn-handler").click();
-    cy.lighthouse();
-  });
 
-  it.only('lighthouse audits', () => {
-
-cy.visit('www.addq.se');
-
-
-    //cy.get("#onetrust-accept-btn-handler").click();
-   //  cy.screenshot();
     const customThresholds = {  
       performance: 70,
       accessibility: 90,
