@@ -4,7 +4,12 @@
   "description": "",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:local": "npx cypress open",
+    "test:docker": "docker-compose up",
+    "test:dashboard": "npx cypress run --record --key c018396d-a9ae-4036-96cf-f8c5fd0808db",
+    "docker:build": "docker build -t cypress-test-image:1.0.0 -f Dockerfile .",
+    "docker:run": "docker run -t cypress-test-image:1.0.0 ."
   },
   "author": "",
   "license": "ISC",
