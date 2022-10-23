@@ -3,6 +3,7 @@ const { defineConfig } = require('cypress')
 const { lighthouse, prepareAudit } = require('cypress-audit')
 
 module.exports = defineConfig({
+  projectId: "cwziut", // Used for dashboard.cypress.io 
   "chromeWebSecurity": false,
   e2e: {
     // We've imported your old cypress plugins here.
