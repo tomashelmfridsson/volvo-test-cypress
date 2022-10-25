@@ -1,8 +1,6 @@
 # volvo-test-cypress
 Test framework for one volvocar webpage using cypress
 
-[[_TOC_]]
-
 ## Requirements
 - Node v ≥ 16 (if you use nvm, run `nvm use`)
 - Javascript editor
@@ -22,7 +20,10 @@ There are different way to run the test
 - Start test with a shellscript `.cy-run.sh`
 
 ## Testcases
+### Campaign
+In this spec file we test functional flow tests
 
-### Lighhouse
+### Lighthouse
+This testcase do an audit for performance and accessibility for the webpage
 
 Happy testing! :heart:
