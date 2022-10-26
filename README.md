@@ -31,4 +31,12 @@ Rigth now just the trust pop up.
 ### Lighthouse
 This testcase do an audit for performance and accessibility for the webpage. An audit report is included report_volvo.html
 
+### Issues and Todo
+- An issue is that the testpage is bloccking webrobots like cypress, I have an workaround, could be improved.
+- It is not working to run the dockerfile execution on Mac M1 computer, however works on other computers.
+- Report is still not implemented properly
+- Visual testing is still missing. Did a draft that need to be improved.
+- Nonfunctional testing by Lighthouse showed some improvements that may need to be implemented for the SUT (system under test)
+- Parallel running by cypress dashboard needs some more love. 
+
 Happy testing! :heart:
