@@ -9,7 +9,9 @@
     "test:docker": "docker-compose up",
     "test:dashboard": "npx cypress run --record --key c018396d-a9ae-4036-96cf-f8c5fd0808db",
     "docker:build": "docker build -t cypress-test-image:1.0.0 -f Dockerfile .",
-    "docker:run": "docker run -t cypress-test-image:1.0.0 ."
+    "docker:run": "docker run -t cypress-test-image:1.0.0 npx cypress run --record  --key=abc123 --parallel --ci-build",
+    "docker:parallel": "docker run -t cypress-test-image:1.0.0 npx cypress run --record --key=c018396d-a9ae-4036-96cf-f8c5fd0808db --ci-build-id=githubActions --parallel",
+    "docker:lighthouse": "docker run -t cypress-test-image:1.0.0 npx cypress run --record  --key=abc123 --parallel --ci-build --spec cypress/e2e/lighthouse/*.cy.js"
   },
   "author": "",
   "license": "ISC",
